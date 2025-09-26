@@ -1,8 +1,8 @@
 /* roots */
 
 :root{
-    --white: #fff;
-    --black: #000;
+    --neutral-first: #fff;
+    --neutral-second: #000;
     --desc-basic: #737373;
     --desc-light: #F6F6F6;
     --link-active: #FA4A0C;
@@ -10,6 +10,7 @@
     --copyright-color: #5c5c5c;
     --subtitle-colorize: #FA4A0C;
     --btn-background: #FA4A0C;
+    --link-color: #252b42;
 }
 :root{
     --font-family: "Montserrat", sans-serif;
@@ -22,7 +23,11 @@
 body{
     padding: 0px;
     margin: 0px;
+    font-family: var(--font-family);
     font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0.1px;
 }
 
 .container{
@@ -30,17 +35,8 @@ body{
     margin: 0 auto;
 }
 
-a, p, ul, li, h1, h2, h3{
-    padding: 0px;
-    margin: 0px;
-}
-
 a {
-    text-decoration: none;
-}
-
-ul{
-    list-style: none;
+    display: inline-block;
 }
 
 /* header */
@@ -55,16 +51,17 @@ ul{
     gap: 455px;
 }
 
-.header-nav-list{
+.header-list{
     display: flex;
     gap: 104px;
 }
 
 .header-link{
-    color: var(--black);
-    font-family: var(--font-family);
+    color: var(--link-color);
+    padding: 10px;
     font-weight: 600;
     font-size: 16px;
+    transition: 250ms ease-in-out;
 }
 
 .header-link:hover{
@@ -89,29 +86,28 @@ ul{
 
 .banner-subtitle{
     color: var(--desc-light);
-    font-family: var(--font-family);
-    font-size: 24px;
-    font-weight: 700;
     text-align: center;
     margin-bottom: 10px;
+    line-height: 150%;
+    letter-spacing: 0em;
 }
 
 .banner-title{
-    color: var(--white);
+    color: var(--neutral-first);
     font-family: var(--second-family);
     font-size: 58px;
-    font-weight: 700;
     width: 1005px;
     text-align: center;
     line-height: 138%;
     margin-bottom: 10px;
+    letter-spacing: 0em;
 }
 
 .banner-desc{
     color: var(--desc-light);
-    font-family: var(--font-family);
-    font-size: 24px;
-    margin-bottom: 78px;
+    margin-bottom: 94px;
+    font-weight: 500;
+    line-height: 158%;
 }
 
 .banner-list{
@@ -120,13 +116,9 @@ ul{
 }
 
 .banner-deliv-link, .banner-menu-link{
-    color: var(--white);
-    font-family: var(--font-family);
-    font-size: 24px;
-    font-weight: 700;
+    color: var(--neutral-first);
     padding: 16px 66px;
     border-radius: 30px;
-    font-weight: 700;
 }
 
 .banner-deliv-link{
@@ -134,18 +126,18 @@ ul{
 }
 
 .banner-menu-link{
-    border: 1px var(--white) solid;
+    border: 1px var(--neutral-first) solid;
 }
 
 /* app */
 
 .app{
-    margin-top: 56px;
-    margin-bottom: 184px;
+    padding-top: 56px;
+    padding-bottom: 184px;
 }
 
 .app-main-title{
-    color: var(--black);
+    color: var(--neutral-second);
     font-family: var(--second-family);
     font-size: 44px;
     font-weight: 600;
@@ -155,22 +147,23 @@ ul{
 
 .app-list{
     display: flex;
-    gap: 106px;
     flex-direction: column;
+    gap: 108px;
 }
 
-.app-list-item{
+.app-item{
     display: flex;
     align-items: center;
-    gap: 287px;
+    justify-content: space-between;
+}
+
+.app-subcontainer{
+    width: 568px;
 }
 
 .app-subtitle{
     color: var(--subtitle-colorize);
-    font-family: var(--font-family);
-    font-weight: 700;
-    font-size: 24px;
-    margin-bottom: 7px;
+    margin-bottom: 17px;
 }
 
 .app-title{
@@ -193,8 +186,8 @@ ul{
 /* order */
 
 .order{
-    padding-top: 141px;
-    padding-bottom: 139px;
+    padding-top: 131px;
+    padding-bottom: 130px;
     background-image: url(../images/background-order.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -207,19 +200,19 @@ ul{
 }
 
 .order-title{
-    color: var(--white);
-    font-family: var(--font-family);
-    font-weight: 700;
+    color: var(--neutral-first);
     font-size: 40px;
+    line-height: 142%;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .order-desc{
-    color: var(--white);
-    font-family: var(--font-family);
+    color: var(--neutral-first);
     font-weight: 500;
-    font-size: 24px;
-    margin-bottom: 59px;
+    line-height: 158%;
+    margin-bottom: 67px;
+    text-align: center;
 }
 
 .order-list{
@@ -227,23 +220,23 @@ ul{
     gap: 16px;
 }
 
-.order-playstore-link, .order-appstore-link{
-    color: var(--white);
-    font-family: var(--font-family);
+.order-link{
+    color: var(--neutral-first);
     font-size: 16px;
-    font-weight: 700;
-    padding: 18px 31px;
+    line-height: 175%;
     border-radius: 10px;
-    font-weight: 700;
 }
 
-.order-playstore-link{
+.order-item:nth-of-type(1) > .order-link {
     background-color: var(--btn-background);
+    padding: 18px 31px;
 }
 
-.order-appstore-link{
-    border: 1px var(--white) solid;
+.order-item:nth-of-type(2) > .order-link {
+    border: 1px solid var(--neutral-first);
+    padding: 16px 45px;
 }
+
 
 /* footer */
 
@@ -261,6 +254,5 @@ ul{
 .footer-copyright{
     color: var(--copyright-color);
     font-family: var(--third-family);
-    font-weight: 700;
     font-size: 12px;
 }
