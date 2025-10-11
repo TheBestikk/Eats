@@ -27,7 +27,7 @@ body{
     font-size: 24px;
     font-weight: 700;
     line-height: 36px;
-    letter-spacing: 0.1px;
+    letter-spacing: 0.2px;
 }
 
 .container{
@@ -48,12 +48,12 @@ a {
 .header-container{
     display: flex;
     align-items: center;
-    gap: 455px;
+    justify-content: space-between;
 }
 
 .header-list{
     display: flex;
-    gap: 104px;
+    gap: 94px;
 }
 
 .header-link{
@@ -66,6 +66,11 @@ a {
 
 .header-link:hover{
     color: var(--link-active);
+}
+
+.header-logo{
+    width: 160px;
+    height: 65px;
 }
 
 /* banner */
@@ -105,7 +110,7 @@ a {
 
 .banner-desc{
     color: var(--desc-light);
-    margin-bottom: 94px;
+    margin-bottom: 78px;
     font-weight: 500;
     line-height: 158%;
 }
