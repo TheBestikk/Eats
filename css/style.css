@@ -1,4 +1,4 @@
-/* roots */
+
 
 :root{
     --neutral-first: #fff;
@@ -18,7 +18,7 @@
     --third-family: "Roboto", sans-serif;
 }
 
-/* main settings */
+
 
 body{
     padding: 0px;
@@ -73,7 +73,7 @@ a {
     height: 65px;
 }
 
-/* banner */
+
 
 .banner{
     padding-top: 80px;
@@ -133,7 +133,7 @@ a {
     border: 1px var(--neutral-first) solid;
 }
 
-/* app */
+
 
 .app{
     padding-top: 56px;
@@ -187,7 +187,6 @@ a {
     line-height: 158%;
 }
 
-/* order */
 
 .order{
     padding-top: 131px;
@@ -242,7 +241,7 @@ a {
 }
 
 
-/* footer */
+
 
 .footer{
     padding-top: 114px;
